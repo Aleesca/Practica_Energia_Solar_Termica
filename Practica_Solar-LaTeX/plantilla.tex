@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage{preamble}
+
+\begin{document}
+\pagenumbering{Alph}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Portada %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+
+
+	% --- LOGOTIPOS (ALINEADOS ARRIBA, IZQUIERDA Y DERECHA) ---
+	\noindent
+	\includegraphics[width=0.35\textwidth]{Figuras/ule.jpg}
+	\hfill
+	\includegraphics[height=2.5cm]{Figuras/escudo-ingenierias.png}
+
+	\vspace{3cm}
+
+	% --- BLOQUES DE TEXTO CENTRADOS ---
+	\begin{center}
+		{
+			\fontsize{22pt}{26pt}\selectfont\bfseries
+			Escuela de Ingenierías \\ Industrial, Informática y Aeroespacial
+		}
+
+		\vspace{2cm}
+
+		{\LARGE\bfseries GRADO EN INGENIERÍA MECÁNICA} \\
+		\vspace{0.5cm}
+		{\LARGE\bfseries INSTALACIONES II}
+
+		\vspace{2cm}
+
+		{\Large PRÁCTICA DE ENERGÍA SOLAR TÉRMICA}\\[2cm]
+	\end{center}
+
+	\vfill
+
+	% --- AUTORES Y TUTOR (ALINEADOS A LA DERECHA) ---
+	\begin{flushright}
+		\large
+		\begin{tabular}{@{}l@{ }l}
+			\textbf{Autores:} & Alberto España Carrete    \\
+			                  & Carlos Fernandez Palanca  \\
+			                  & Rubén Modino López        \\
+			                  & Juan Diego Niño González  \\ [5pt]
+			\textbf{Tutor:}   & Roberto Getino de la Mano
+		\end{tabular}
+	\end{flushright}
+
+	\vspace{1.5cm}
+
+	% --- FECHA (CENTRADA Y CON TAMAÑO ESPECÍFICO DE 22pt) ---
+	\begin{center}
+		{\fontsize{22pt}{26pt}\selectfont (Junio, 2026)}
+	\end{center}
+
+	\thispagestyle{empty}
+\end{titlepage}
+
+%%%% Indices -----------------------------------------------
+
+\hypersetup{linkcolor=black}
+\pagenumbering{roman}
+\tableofcontents\thispagestyle{empty}
+
+{
+	\let\oldnumberline\numberline	% Añade Figura 1.1 en lugar de 1.1
+	\renewcommand{\numberline}{\figurename~\oldnumberline}
+	\cleardoublepage						% En pagina nueva
+	\listoffigures\thispagestyle{empty}	% Pone el encabezado y pie
+	\phantomsection
+	\addcontentsline{toc}{section}{\listfigurename}	%Lo añade al indice
+
+}
+
+{
+	\let\oldnumberline\numberline	% Añade Tabla 1.1 en lugar de 1.1
+	\renewcommand{\numberline}{\tablename~\oldnumberline}
+	\cleardoublepage		% En pagina nueva
+	\listoftables\thispagestyle{empty}	% Pone el encabezado y pie
+	\phantomsection
+	\addcontentsline{toc}{section}{\listtablename}%Lo añade al indice
+}
+
+% En el encabezado se modifican aspectos gen. del indice.
+
+\hypersetup{
+	linkcolor=blue,
+	citecolor=blue,
+	urlcolor=blue
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Contenido %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nocite{*}
+\clearpage
+\pagenumbering{arabic}
+\section{Introducción}
+\label{sec:introduccion}
+
+
+%%%% Referencias------------------------
+
+\renewcommand{\refname}{Bibliografía}
+\bibliographystyle{IEEEtran}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{Bibliografía}
+\bibliography{refs}
+
+%%%% Anexos ----------------------------
+% 2. Iniciamos el entorno de anexos
+\myappendix{Planos}
+\label{anx:01-planos}
+
+
+
+
+
+\end{document}
+
