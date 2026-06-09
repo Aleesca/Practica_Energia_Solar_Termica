@@ -835,7 +835,7 @@ nlm config set <key> <value>
 | `output.color` | `true` | Enable colored output |
 | `output.short_ids` | `true` | Show shortened IDs |
 | `auth.browser` | `auto` | Preferred browser for login (auto, chrome, arc, brave, edge, chromium, vivaldi, opera). Falls back to auto if preferred browser is not found. |
-| `auth.default_profile` | `default` | Profile to use when `--profile` not specified. **Note:** The MCP Server always uses the active default profile. Changing this setting will instantaneously switch the MCP server's Google account. |
+| `auth.default_profile` | `default` | Profile to use when `--profile` is not specified. |
 
 **Example**: Set default profile to avoid typing `--profile` for every command:
 
