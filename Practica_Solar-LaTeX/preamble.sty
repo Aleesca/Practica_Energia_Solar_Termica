@@ -207,6 +207,25 @@
 \newcounter{appendixcounter}
 \renewcommand{\theappendixcounter}{\arabic{appendixcounter}} % Anexo 1, Anexo 2
 
+% Entorno para secciones de anexo que son separadores centrados (sin encabezados ni pies)
+\newenvironment{appendixspecialsections}{
+    \let\oldsection\section
+    \renewcommand{\section}[1]{
+        \cleardoublepage
+        \thispagestyle{empty}
+        \refstepcounter{section}
+        \vspace*{\fill}
+        \begin{center}
+            {\normalfont\fontsize{24pt}{28.8pt}\selectfont\bfseries \thesection. ##1}
+        \end{center}
+        \vspace*{\fill}
+        \addcontentsline{toc}{subsection}{\protect\numberline{\thesection}##1}
+        \newpage
+    }
+}{
+    \let\section\oldsection
+}
+
 \newcommand{\myappendix}[1]{%
     \cleardoublepage
     \thispagestyle{empty}
