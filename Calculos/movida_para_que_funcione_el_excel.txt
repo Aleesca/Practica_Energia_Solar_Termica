@@ -1,0 +1,11 @@
+https://www.datacamp.com/es/tutorial/unprotect-excel-sheet
+
+Hice lo del .zip
+
+ dentro extraí la carpeta de worksheet y me lo puse a editar lo .XML y a guardar .7zip te los permite editar pero vas más rápido así con el editor de vscode. 
+
+Luego una vez modifiqué todos los archivos los volví a carga al .zip y ya cambié la extensión a .xlsm.
+
+Antes de abrir la hoja click dcho propiedades desproteger....
+
+Finalmente abres y ya deja editar todo.
