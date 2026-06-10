@@ -1,5 +1,7 @@
 # Selección de Bomba Comercial para el Circuito Solar Térmico y Análisis de Bombeo
 
+> Relacionado con: [3.3. Condicionantes de Integración Física](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-33-condicionantes-de-integración-física) y [3.4. Equipamiento de Referencia y Fluidos](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-34-equipamiento-de-referencia-y-fluidos)
+
 Esta anotación técnica justifica la necesidad, ubicación y selección de los equipos de bombeo hidráulico para la instalación solar térmica colectiva y su sistema bivalente de acumulación. La investigación se fundamenta en la consulta del cuaderno de trabajo de NotebookLM `Energia_Solar_Termica` y en la búsqueda profunda de catálogos comerciales de fabricantes europeos (con prioridad en firmas alemanas).
 
 ---
@@ -8,7 +10,7 @@ Esta anotación técnica justifica la necesidad, ubicación y selección de los 
 
 El diseño hidráulico de una instalación solar térmica centralizada con acumulación bivalente requiere determinar con precisión en qué tramos es estrictamente necesaria la circulación forzada y en cuáles se puede prescindir de ella. 
 
-Se concluye que la instalación requiere **tres bombas de circulación independientes** (circuito primario solar, circuito de apoyo de caldera y anillo de recirculación de ACS) y **prescinde de bomba en el circuito secundario solar** debido al intercambio térmico directo por serpentín interno. Para el circuito primario solar, se prescribe como opción preferente la bomba de alta eficiencia **Grundfos ALPHA SOLAR 25-75 180**, quedando como alternativas viables los modelos de Wilo.
+Se concluye que la instalación requiere **tres bombas de circulación independientes** (circuito primario solar, circuito de apoyo de caldera y anillo de recirculación de ACS) y **prescinde de bomba en el circuito secundario solar** debido al intercambio térmico directo por serpentín interno. Para el circuito primario solar, dado que la bomba se ubica en el sótano y debe superar la altura estática del edificio hasta la azotea (mínimo de $15,5\text{ m}$ para la fase de llenado inicial o en caso de un esquema de vaciado por gravedad/drainback), se selecciona como opción preferente el circulador de rotor húmedo de alta eficiencia **Grundfos MAGNA3 40-180 F** (con una altura nominal máxima de $18\text{ m.c.a.}$), quedando modelos de Wilo como alternativas equivalentes.
 
 ---
 
@@ -47,55 +49,58 @@ La bomba del circuito solar primario debe ubicarse en la **tubería de retorno**
     *   *Para Calefacción:* Las calderas murales ya incorporan de fábrica su propia **bomba circuladora interna** dentro de su chasis. Por lo tanto, tampoco se requiere un circulador externo para este servicio en condiciones normales de diseño.
     *   *Esquema de Integración:* La conexión hidráulica se realiza mediante un kit de derivación y mezcla termostática (Kit Solar) que bypassera la caldera cuando el agua solar es suficiente ($>45^\circ\text{C}$) y la derivará a su entrada cuando requiera recalentamiento de apoyo.
 
----
+## 4. Búsqueda Profunda de Alternativas Comerciales (Alta Altura Manométrica)
 
-## 4. Búsqueda Profunda de Alternativas Comerciales
+Dado que la bomba del primario solar estará ubicada en el sótano del edificio y debe satisfacer una elevación de columna de fluido de al menos **$15,5\text{ m}$** hasta la azotea (para permitir el llenado inicial de la red, purgar el aire y posibilitar un eventual sistema de vaciado por gravedad o drainback), los circuladores domésticos estándar roscados (con límites de $7-8\text{ m}$ de altura máxima) son insuficientes. 
 
-Mediante búsqueda profunda de fabricantes europeos líderes en tecnología de bombeo (priorizando los alemanes Wilo y Grundfos), se han seleccionado tres alternativas de alta eficiencia compatibles con la aplicación solar térmica (resistentes al glicol y con control PWM):
+Mediante búsqueda profunda en catálogos de fabricantes europeos, se seleccionan tres alternativas de alta eficiencia embridadas (DN40) capaces de proporcionar la altura manométrica exigida:
 
-### 1. Opción Preferente: Grundfos ALPHA SOLAR 25-75 180 (Dinamarca)
-Es un circulador de alta eficiencia con motor de imanes permanentes diseñado específicamente para sistemas solares térmicos.
-*   **Ficha Técnica Oficial (Grundfos Product Center):** [Model 98989300](https://product-selection.grundfos.com/product-detail.product-detail.html?productnumber=98989300)
-*   **Altura Manométrica Máxima ($H_{max}$):** $7,5\text{ m}$ (75 dm)
-*   **Caudal Nominal ($Q_{nom}$):** $1,85\text{ m}^3\text{/h}$ (adecuado para cubrir el punto de diseño de $0,69\text{ m}^3\text{/h}$)
-*   **Rango de Temperatura del Fluido:** $2^\circ\text{C}$ a $110^\circ\text{C}$ (soporta picos de temperatura en instalaciones solares)
+### 1. Opción Preferente: Grundfos MAGNA3 40-180 F (Dinamarca)
+Circulador de rotor húmedo de alta eficiencia con modulación electrónica avanzada para instalaciones comerciales.
+*   **Ficha Técnica Oficial (Grundfos Product Center):** [Model 97924272](https://product-selection.grundfos.com/product-detail.product-detail.html?productnumber=97924272)
+*   **Altura Manométrica Máxima ($H_{max}$):** **$18,0\text{ m.c.a.}$** (180 dm), lo que supera el requisito mínimo de $15,5\text{ m}$ para elevar el fluido hasta la azotea.
+*   **Caudal Máximo ($Q_{max}$):** $20\text{ m}^3\text{/h}$ (permite trabajar de forma holgada en el punto de diseño de $0,69\text{ m}^3\text{/h}$).
+*   **Rango de Temperatura del Fluido:** $-10^\circ\text{C}$ a $110^\circ\text{C}$.
 *   **Compatibilidad con Glicol:** Sí, apto para mezclas de agua/glicol propileno hasta el **50%**.
-*   **Control de Velocidad:** Admite control externo mediante señal **PWM** (Pulse Width Modulation) de perfil solar, permitiendo a la centralita solar regular el caudal de forma continua. También dispone de 3 velocidades constantes.
-*   **Consumo Eléctrico:** Muy bajo, de $2\text{ W}$ a $45\text{ W}$ (Índice de Eficiencia Energética $\text{EEI} \le 0,20$).
-*   **Conexiones:** Rosca exterior G 1 1/2" (DN25), con longitud entre bocas de $180\text{ mm}$.
+*   **Control y Regulación:** Control automático inteligente (AUTOADAPT, FLOWADAPT), modulación por presión proporcional/constante, temperatura constante y modos de control externos (compatible con lógica de consigna externa).
+*   **Consumo Eléctrico:** De $9\text{ W}$ a $604\text{ W}$ ($\text{EEI} \le 0,18$).
+*   **Conexiones:** Conexión embridada DN40 (PN 6/10) con una longitud entre bocas de $220\text{ mm}$ (requiere bridas de adaptación para las tuberías de DN25 del primario).
 
-### 2. Alternativa Comercial 1: Wilo-Yonos PARA ST 25/7.0 PWM2 (Alemania)
-Circulador de rotor húmedo de alta eficiencia para aplicaciones solares térmicas.
-*   **Altura Manométrica Máxima ($H_{max}$):** $7,3\text{ m}$
-*   **Caudal Máximo ($Q_{max}$):** $3,3\text{ m}^3\text{/h}$
-*   **Rango de Temperatura del Fluido:** Hasta $110^\circ\text{C}$ (a una temperatura ambiente de $55^\circ\text{C}$).
-*   **Compatibilidad con Glicol:** Sí, hasta el **50%** de concentración de glicol.
-*   **Control de Velocidad:** Control externo de velocidad mediante señal **PWM2** de lógica solar.
-*   **Consumo Eléctrico:** $3\text{ W}$ a $45\text{ W}$.
-*   **Conexiones:** Rosca G 1 1/2" (DN25) con longitud entre bocas de $180\text{ mm}$ (también disponible en versión de $130\text{ mm}$).
+### 2. Alternativa Comercial 1: Wilo-Yonos MAXO 40/0,5-16 (Alemania)
+Circulador de rotor húmedo estándar de alta eficiencia con brida DN40.
+*   **Ficha Técnica Oficial (Catálogo Wilo):** [Wilo-Yonos MAXO 40/0,5-16](https://wilo.com)
+*   **Altura Manométrica Máxima ($H_{max}$):** **$17,6\text{ m.c.a.}$** (supera los $15,5\text{ m}$ mínimos).
+*   **Caudal Máximo ($Q_{max}$):** $27,6\text{ m}^3\text{/h}$.
+*   **Rango de Temperatura del Fluido:** $-20^\circ\text{C}$ a $110^\circ\text{C}$.
+*   **Compatibilidad con Glicol:** Sí, apto para mezclas hasta el **50%** de glicol.
+*   **Control y Regulación:** Presión diferencial variable ($\Delta p-v$), presión diferencial constante ($\Delta p-c$) y 3 velocidades fijas.
+*   **Consumo Eléctrico:** $40\text{ W}$ a $800\text{ W}$ ($\text{EEI} \le 0,20$).
+*   **Conexiones:** Embridada DN40 (PN 6/10) con longitud entre bocas de $250\text{ mm}$.
 
-### 3. Alternativa Comercial 2: Wilo-Yonos PICO-STG 25/1-7.5 (Alemania)
-Bomba circuladora de alta eficiencia para instalaciones solares y geotérmicas con interfaz de usuario integrada.
-*   **Altura Manométrica Máxima ($H_{max}$):** $7,5\text{ m}$
-*   **Caudal Máximo ($Q_{max}$):** $\approx 2,4\text{ m}^3\text{/h}$
-*   **Rango de Temperatura del Fluido:** $0^\circ\text{C}$ a $110^\circ\text{C}$
-*   **Compatibilidad con Glicol:** Sí, hasta el **50%**.
-*   **Control de Velocidad:** Modos de presión diferencial variable ($\Delta p-v$), velocidad constante y control externo iPWM2 (solar).
-*   **Características Adicionales:** Incorpora visualizador LED para el ajuste del punto de consigna y visualización del consumo instantáneo. Dispone de cuerpo con recubrimiento cataforético contra la corrosión por condensación.
+### 3. Alternativa Comercial 2: Wilo-Stratos MAXO 40/0,5-16 (Alemania)
+Circulador inteligente ("Smart-Pump") de rotor húmedo y máxima eficiencia con comunicación integrada.
+*   **Ficha Técnica Oficial (Catálogo Wilo):** [Wilo-Stratos MAXO 40/0,5-16](https://wilo.com)
+*   **Altura Manométrica Máxima ($H_{max}$):** **$16,3\text{ m.c.a.}$** (suficiente para cubrir la cota de $15,5\text{ m}$).
+*   **Caudal Máximo ($Q_{max}$):** $30,2\text{ m}^3\text{/h}$.
+*   **Rango de Temperatura del Fluido:** $-10^\circ\text{C}$ a $110^\circ\text{C}$.
+*   **Compatibilidad con Glicol:** Sí, apto para mezclas hasta el **50%**.
+*   **Control y Regulación:** Funciones avanzadas de control de temperatura y caudal (*Dynamic Adapt plus*, *Multi-Flow Adaptation*), conectividad Bluetooth, entradas analógicas y digitales, y bus de comunicación para integración en domótica (BMS).
+*   **Consumo Eléctrico:** $15\text{ W}$ a $640\text{ W}$ ($\text{EEI} \le 0,17$).
+*   **Conexiones:** Embridada DN40 (PN 6/16) con longitud entre bocas de $250\text{ mm}$.
 
-### Matriz Comparativa de Equipos de Bombeo Solar
+### Matriz Comparativa de Equipos de Bombeo Solar (Alta Presión)
 
-| Parámetro Técnico | Grundfos ALPHA SOLAR 25-75 180 <br>**(PREFERENTE)** | Wilo-Yonos PARA ST 25/7.0 PWM2 <br>*(ALTERNATIVA 1)* | Wilo-Yonos PICO-STG 25/1-7.5 <br>*(ALTERNATIVA 2)* |
+| Parámetro Técnico | Grundfos MAGNA3 40-180 F <br>**(PREFERENTE)** | Wilo-Yonos MAXO 40/0,5-16 <br>*(ALTERNATIVA 1)* | Wilo-Stratos MAXO 40/0,5-16 <br>*(ALTERNATIVA 2)* |
 | :--- | :---: | :---: | :---: |
 | **Origen del Fabricante** | Dinamarca / Presencia Global | Alemania | Alemania |
-| **Altura Manométrica Máxima**| **$7,5\text{ m.c.a.}$** | $7,3\text{ m.c.a.}$ | **$7,5\text{ m.c.a.}$** |
-| **Caudal Máximo** | $1,85\text{ m}^3\text{/h}$ | **$3,3\text{ m}^3\text{/h}$** | $2,4\text{ m}^3\text{/h}$ |
-| **Temperatura del Fluido** | $2^\circ\text{C}$ a $110^\circ\text{C}$ | $0^\circ\text{C}$ a $110^\circ\text{C}$ | $0^\circ\text{C}$ a $110^\circ\text{C}$ |
+| **Altura Manométrica Máxima**| **$18,0\text{ m.c.a.}$** | $17,6\text{ m.c.a.}$ | $16,3\text{ m.c.a.}$ |
+| **Caudal Máximo** | $20,0\text{ m}^3\text{/h}$ | $27,6\text{ m}^3\text{/h}$ | **$30,2\text{ m}^3\text{/h}$** |
+| **Temperatura del Fluido** | $-10^\circ\text{C}$ a $110^\circ\text{C}$ | **$-20^\circ\text{C}$ a $110^\circ\text{C}$** | $-10^\circ\text{C}$ a $110^\circ\text{C}$ |
 | **Límite Máx. de Glicol** | 50% | 50% | 50% |
-| **Señal de Control** | PWM Solar / 3 curvas constantes | PWM2 Solar | iPWM2 Solar / $\Delta p-v$ / Constante |
-| **Consumo Eléctrico (P1)** | **$2 - 45\text{ W}$** | $3 - 45\text{ W}$ | $3 - 45\text{ W}$ |
-| **Dimensiones / Conexión** | DN25 (G 1 1/2"), L = 180 mm | DN25 (G 1 1/2"), L = 180 mm | DN25 (G 1 1/2"), L = 180 mm |
-| **Facilidad de Integración** | Excelente (estándar en grupos solar) | Excelente (integración OEM) | Excelente (pantalla de control local) |
+| **Modos de Regulación** | Modulación completa, auto-adaptativa, señal externa | Presión variable / constante / fija | Inteligente, domótica avanzada, adaptabilidad total |
+| **Consumo Eléctrico (P1)** | **$9 - 604\text{ W}$** | $40 - 800\text{ W}$ | $15 - 640\text{ W}$ |
+| **Dimensiones / Conexión** | DN40 embridada, L = 220 mm | DN40 embridada, L = 250 mm | DN40 embridada, L = 250 mm |
+| **Facilidad de Integración** | Excelente (estándar comercial) | Excelente (robusto y sencillo) | Excelente (máxima conectividad BMS) |
 
 ---
 
@@ -117,10 +122,11 @@ Para cerrar el punto de trabajo definitivo de la bomba ($Q$ y $H$) en la fase de
 4.  **Curvas de Pérdida de Carga de los Equipos:** La curva de pérdida de carga interna de los captadores **Viessmann Vitosol 200-FM SV2F** operando con glicol a bajas temperaturas, y la pérdida de carga del serpentín inferior del interacumulador **Lapesa MXV-2000 SS2B** (que tiene una superficie de intercambio de $3,4\text{ m}^2$).
 5.  **Ajuste por Viscosidad del Glicol:** Las curvas comerciales de las bombas se ensayan con agua pura a $20^\circ\text{C}$. Dado que se utiliza glicol propileno al 30-50%, la densidad y viscosidad cinemática del fluido aumentan, incrementando las pérdidas de carga en un **$15\% - 30\%$** en comparación con el agua sola. La altura manométrica calculada debe corregirse con este factor.
 
-### C. Condicionamiento de la Selección
-Debido a estos parámetros faltantes, la selección final de la bomba queda condicionada a que las pérdidas de carga dinámicas del circuito primario solar (corregidas por el factor de viscosidad del glicol) no superen el rango de trabajo de los circuladores prescritos:
-*   Con el caudal de diseño de **$693\text{ L/h}$** ($0,69\text{ m}^3\text{/h}$), la bomba **Grundfos ALPHA SOLAR 25-75** puede aportar una altura manométrica de hasta **$6,8\text{ m.c.a.}$** (metros de columna de agua), lo cual es sumamente holgado para una instalación centralizada de 12 captadores en un edificio plurifamiliar estándar de 3 a 5 plantas.
-*   Si tras realizar el cálculo de pérdidas de carga detallado la altura dinámica resultante fuese inferior a $3,5\text{ m.c.a.}$, se podría pasar a un modelo menor (como la *Grundfos ALPHA SOLAR 25-60* o *Wilo-Yonos PARA ST 25/6.0*) para optimizar el consumo de energía eléctrica y reducir el riesgo de ruidos hidráulicos por exceso de presión en las tuberías.
+### C. Condicionamiento de la Selección y Dimensionado Físico
+La selección definitiva del modelo dentro de la gama de alta presión queda sujeta a las siguientes verificaciones en la fase final de diseño:
+*   **Superación de la Altura Estática (15,5 m):** Los modelos seleccionados (**Grundfos MAGNA3 40-180 F** con $18\text{ m.c.a.}$, **Wilo-Yonos MAXO 40/0,5-16** con $17,6\text{ m.c.a.}$ y **Wilo-Stratos MAXO 40/0,5-16** con $16,3\text{ m.c.a.}$) garantizan que el sistema pueda completarse físicamente de fluido desde el sótano a la azotea, venciendo la presión hidrostática durante el llenado inicial o en ciclos de drainback.
+*   **Adaptación de Diámetros:** Al tratarse de bombas con conexiones embridadas de DN40, y siendo la red de distribución de cobre de menor sección (típicamente DN25 o DN32), se prescribirá la instalación de **contrabridas reductoras cónicas** a la entrada y salida de la bomba para asegurar una transición hidráulica suave y evitar turbulencias o pérdidas de carga singulares elevadas en la aspiración.
+*   **Punto de Operación en Régimen Estable:** Una vez que el circuito está lleno y presurizado, la altura necesaria para mantener la circulación baja significativamente (pues solo se requiere vencer la fricción, típicamente de $3$ a $6\text{ m.c.a.}$). Gracias a la modulación electrónica automática de las gamas MAGNA3 y Stratos/Yonos MAXO, las bombas reducirán su velocidad y consumo eléctrico a una fracción del máximo, operando en su zona de alta eficiencia y previniendo problemas de ruidos en la red.
 
 ---
 
@@ -140,9 +146,9 @@ Se prescribe obligatoriamente la conexión del circulador primario solar a la ce
     *   *Documento de Conceptos Generales:* Requisitos de ubicación de bombas en zonas frías del primario y en el tramo de retorno de recirculación.
     *   *Casos Prácticos:* Dimensionado y cálculo de pérdida de carga del tramo de retorno ACS y especificación del cuerpo de bronce/inox para evitar la cal.
 *   **Fichas de Fabricantes:**
-    *   Catálogo Técnico Grundfos: [Ficha Técnica Oficial - Grundfos Product Center (ALPHA SOLAR 25-75 180)](https://product-selection.grundfos.com/product-detail.product-detail.html?productnumber=98989300)
-    *   Ficha de Producto Wilo: *Wilo-Yonos PARA ST / Wilo-Yonos PICO-STG Datasheets* (OEM solar pumps and high-efficiency circulators).
+    *   Catálogo Técnico Grundfos: [Ficha Técnica Oficial - Grundfos Product Center (MAGNA3 40-180 F)](https://product-selection.grundfos.com/product-detail.product-detail.html?productnumber=97924272)
+    *   Catálogo Técnico Wilo: *Wilo-Yonos MAXO / Wilo-Stratos MAXO Catalogues* (Glandless high-efficiency circulation pumps for commercial applications).
 *   **Anotaciones Técnicas Relacionadas:**
-    *   [especificacion-antecedentes-y-datos-de-partida.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Especificaciones/especificacion-antecedentes-y-datos-de-partida.md)
-    *   [fluido-caloportador-solar-termica.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/fluido-caloportador-solar-termica.md)
-    *   [seleccion-interacumulador-acs-bivalente-lapesa.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/seleccion-interacumulador-acs-bivalente-lapesa.md)
+    *   [especificacion-antecedentes-y-datos-de-partida.md](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md)
+    *   [fluido-caloportador-solar-termica.md](fluido-caloportador-solar-termica.md)
+    *   [seleccion-interacumulador-acs-bivalente-lapesa.md](seleccion-interacumulador-acs-bivalente-lapesa.md)

@@ -1,5 +1,7 @@
 # Balance energetico de la instalacion solar termica
 
+> Relacionado con: [3.2. Edificación, Ocupación y Perfil de Demanda](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-32-edificación-ocupación-y-perfil-de-demanda) y [3.4. Equipamiento de Referencia y Fluidos](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-34-equipamiento-de-referencia-y-fluidos)
+
 Esta anotacion recoge la tabla de balance energetico mensual y la grafica original extraidas de `Calculos/herramienta_calculo.xlsm`. El objetivo es interpretar la cobertura solar calculada, detectar los meses criticos y relacionar el resultado con la seleccion del interacumulador bivalente desarrollada en [`seleccion-interacumulador-acs-bivalente-lapesa.md`](seleccion-interacumulador-acs-bivalente-lapesa.md).
 
 La hoja `Principal` del Excel esta actualizada con **12 captadores**, **27,96 m2** de superficie de captacion y **2.000 litros** de acumulacion seleccionada. Por tanto, este documento toma ese escenario como balance definitivo de proyecto.

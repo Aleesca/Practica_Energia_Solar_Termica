@@ -1,12 +1,14 @@
 # Justificación Técnica del Azimut e Inclinación de los Captadores Solares
 
+> Relacionado con: [3.1. Ubicación Geográfica y Climatología](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-31-ubicación-geográfica-y-climatología) y [3.3. Condicionantes de Integración Física](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-33-condicionantes-de-integración-física)
+
 Este documento presenta la justificación técnica de la orientación (azimut) y la inclinación seleccionadas para los captadores solares térmicos de la instalación centralizada de ACS hibridada con gas natural.
 
 ---
 
 ## 1. Localización Geográfica y Contexto Climático
 
-Los datos geográficos reales de la edificación se han extraído del archivo [posicion_edificio.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/posicion_edificio.md):
+Los datos geográficos reales de la edificación se han extraído del archivo [posicion_edificio.md](posicion_edificio.md):
 
 *   **Latitud:** $40^\circ 58'\ 8.31''\text{ N}$ (equivalente a $40.968975^\circ\text{ N}$ en formato decimal).
 *   **Longitud:** $5^\circ 40'\ 29.95''\text{ O}$ (equivalente a $5.674986^\circ\text{ O}$ o $-5.674986^\circ$ en formato decimal).wh
@@ -21,7 +23,7 @@ Conforme al Código Técnico de la Edificación (CTE DB-HE) y las tablas de Cens
 
 ## 2. Determinación del Plano de Captación
 
-La instalación se plantea sobre una **cubierta plana transitada (azotea)** del edificio de viviendas (según el [Alcance del proyecto](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Alcance.md)). 
+La instalación se plantea sobre una **cubierta plana transitada (azotea)** del edificio de viviendas (según el [Alcance del proyecto](../Alcance.md)). 
 
 Los captadores solares planos (10 unidades, con una superficie útil de captación de $23.3\text{ m}^2$) se montan sobre estructuras de soporte inclinadas fijadas a bancadas de hormigón sobre la cubierta.
 

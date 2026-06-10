@@ -1,5 +1,7 @@
 # Selección de Equipos: Decisión y Justificación del Interacumulador de 2.000 Litros (Lapesa Master Inox)
 
+> Relacionado con: [2.3. Normativa de Aplicación](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-23-normativa-de-aplicación) y [3.4. Equipamiento de Referencia y Fluidos](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-34-equipamiento-de-referencia-y-fluidos)
+
 Esta anotación técnica presenta la justificación de ingeniería, la comparativa de catálogo y la decisión de diseño definitiva para la selección del depósito de acumulación solar de agua caliente sanitaria (ACS) en una instalación centralizada. 
 
 A partir de los datos iniciales y las exigencias de operación, mantenimiento y prevención sanitaria, se decanta formalmente la elección por el modelo de **2.000 litros** de la serie **Master Inox de Lapesa**, descartando la capacidad de 1.500 litros inicialmente propuesta.
@@ -25,7 +27,7 @@ A partir del cuaderno de trabajo `Energia_Solar_Termica` (ID: `62b2af52-7df4-455
 2.  **Riesgo de sobrecalentamientos y paradas (Estancamiento):**
     Una relación de $\approx 64\text{ l/m}^2$ reduce la inercia térmica del sistema. En periodos estivales o de baja ocupación, el agua del acumulador alcanzará muy rápido la temperatura de consigna de ACS, provocando que la bomba de recirculación del primario se detenga por seguridad. Esto expone al campo solar a entrar en fase de estancamiento (vaporización del fluido caloportador y degradación prematura del glicol).
 3.  **Incompatibilidad con el sobredimensionamiento hidráulico:**
-    Como se analiza en el [estudio-sobredimensionado-y-fraccion-solar.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/estudio-sobredimensionado-y-fraccion-solar.md), para asegurar el cumplimiento del 67,8% de fracción solar y facilitar el equilibrado hidráulico en retorno invertido (Tichelmann), es altamente recomendable estructurar el campo en un número par de captadores (12 o 14).
+    Como se analiza en el [estudio-sobredimensionado-y-fraccion-solar.md](estudio-sobredimensionado-y-fraccion-solar.md), para asegurar el cumplimiento del 67,8% de fracción solar y facilitar el equilibrado hidráulico en retorno invertido (Tichelmann), es altamente recomendable estructurar el campo en un número par de captadores (12 o 14).
     *   **Con 12 captadores ($S_c = 27,96\text{ m}^2$):** Un acumulador de 1.500 L daría una relación de **$53,65\text{ l/m}^2$**, quedando por debajo del límite mínimo normativo del IDAE de $60\text{ l/m}^2$.
     *   **Con 14 captadores ($S_c = 32,62\text{ m}^2$):** Daría **$45,98\text{ l/m}^2$**, lo cual está **directamente prohibido** por el CTE HE4 ($V/S_c \ge 50\text{ l/m}^2$).
 
@@ -100,6 +102,6 @@ Se selecciona formalmente para el proyecto la siguiente especificación técnica
 
 Esta decisión garantiza la máxima robustez en el diseño de la planta térmica centralizada y mantiene una coherencia total con las demás anotaciones del proyecto:
 
-*   El análisis mensual de cobertura y sobreproducción se recoge en [balance-energetico-solar-termica.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/balance-energetico-solar-termica.md), donde se comprueba que la configuración definitiva de 12 captadores y 2.000 L alcanza una fracción solar anual suficiente sin superar el 110% de cobertura mensual.
-*   Se alinea con la prescripción principal detallada en [seleccion-equipos-solar-centralizado.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/seleccion-equipos-solar-centralizado.md), consolidando el modelo de 2.000 L y descartando la opción de 1.500 L como propuesta base.
-*   Permite adoptar la configuración definitiva de 12 captadores recomendada en el [estudio-sobredimensionado-y-fraccion-solar.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/estudio-sobredimensionado-y-fraccion-solar.md) sin modificar el acumulador, asegurando un diseño estable y en pleno cumplimiento normativo de RITE, CTE HE4 y R.D. 487/2022.
+*   El análisis mensual de cobertura y sobreproducción se recoge en [balance-energetico-solar-termica.md](balance-energetico-solar-termica.md), donde se comprueba que la configuración definitiva de 12 captadores y 2.000 L alcanza una fracción solar anual suficiente sin superar el 110% de cobertura mensual.
+*   Se alinea con la prescripción principal detallada en [seleccion-equipos-solar-centralizado.md](seleccion-equipos-solar-centralizado.md), consolidando el modelo de 2.000 L y descartando la opción de 1.500 L como propuesta base.
+*   Permite adoptar la configuración definitiva de 12 captadores recomendada en el [estudio-sobredimensionado-y-fraccion-solar.md](estudio-sobredimensionado-y-fraccion-solar.md) sin modificar el acumulador, asegurando un diseño estable y en pleno cumplimiento normativo de RITE, CTE HE4 y R.D. 487/2022.

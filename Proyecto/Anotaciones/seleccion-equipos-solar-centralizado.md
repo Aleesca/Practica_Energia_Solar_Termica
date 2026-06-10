@@ -1,5 +1,7 @@
 # Selección de Equipos: Captador Solar y Acumulador ACS Bivalente para Instalación Centralizada
 
+> Relacionado con: [2.2. Justificación del Sistema Centralizado](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-22-justificación-del-sistema-centralizado), [3.3. Condicionantes de Integración Física](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-33-condicionantes-de-integración-física) y [3.4. Equipamiento de Referencia y Fluidos](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-34-equipamiento-de-referencia-y-fluidos)
+
 Esta anotación técnica detalla la selección de equipos para una instalación solar colectiva **completamente centralizada** (acumulación solar centralizada y sistema de apoyo centralizado), respondiendo a la decisión del usuario de evitar la complejidad de un esquema mixto o distribuido.
 
 ---
@@ -63,7 +65,7 @@ La serie **SS2B** está equipada con **dos serpentines de acero inoxidable desmo
 * **Facilidades de montaje:** Sistema de transporte inferior adaptado para transpaletas/carretillas y cáncamos de elevación en la cubierta superior.
 
 ### Alternativa Técnica de 1.500 Litros (Ajuste de Volumen):
-Si por limitaciones presupuestarias o de espacio físico en el acceso a la sala técnica es necesario ajustar estrictamente la acumulación al volumen nominal sugerido de **1.500 litros** (con una relación de diseño de $64,37\text{ l/m}^2$ para $23,3\text{ m}^2$ de captación, plenamente conforme con el RITE), se prescribe el modelo **Lapesa Geiser Inox G 1500 S2**. Este modelo está fabricado también en acero inoxidable AISI 316 L y cuenta con dos serpentines fijos de intercambio (inferior solar de $3,4\text{ m}^2$ y superior de apoyo de $2,0\text{ m}^2$) y boca de hombre DN400, representando la alternativa bivalente estándar de Lapesa para dicha capacidad. Para un análisis comparativo en profundidad, consúltese la anotación técnica [seleccion-interacumulador-acs-bivalente-lapesa.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/seleccion-interacumulador-acs-bivalente-lapesa.md).
+Si por limitaciones presupuestarias o de espacio físico en el acceso a la sala técnica es necesario ajustar estrictamente la acumulación al volumen nominal sugerido de **1.500 litros** (con una relación de diseño de $64,37\text{ l/m}^2$ para $23,3\text{ m}^2$ de captación, plenamente conforme con el RITE), se prescribe el modelo **Lapesa Geiser Inox G 1500 S2**. Este modelo está fabricado también en acero inoxidable AISI 316 L y cuenta con dos serpentines fijos de intercambio (inferior solar de $3,4\text{ m}^2$ y superior de apoyo de $2,0\text{ m}^2$) y boca de hombre DN400, representando la alternativa bivalente estándar de Lapesa para dicha capacidad. Para un análisis comparativo en profundidad, consúltese la anotación técnica [seleccion-interacumulador-acs-bivalente-lapesa.md](seleccion-interacumulador-acs-bivalente-lapesa.md).
 
 ---
 
@@ -73,7 +75,6 @@ Si por limitaciones presupuestarias o de espacio físico en el acceso a la sala 
   * Ficha Técnica Viessmann: [Vitosol-200-FM.pdf](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/00_Data/Catalogos_comerciales/Captadores/Vitosol-200-FM.pdf)
   * Catálogo de Acumuladores Lapesa: [depositos_y_equipamientos_Lapesa.pdf](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/00_Data/Catalogos_comerciales/Interacumuladores_ACS_bivalentes/depositos_y_equipamientos_Lapesa.pdf)
 * **Anotaciones Técnicas Relacionadas:**
-  * Comparativa y Recomendación de Acumulación Solar Bivalente: [seleccion-interacumulador-acs-bivalente-lapesa.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/seleccion-interacumulador-acs-bivalente-lapesa.md)
-  * Estudio de Sobredimensionamiento y Fracción Solar: [estudio-sobredimensionado-y-fraccion-solar.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/estudio-sobredimensionado-y-fraccion-solar.md)
-
+  * Comparativa y Recomendación de Acumulación Solar Bivalente: [seleccion-interacumulador-acs-bivalente-lapesa.md](seleccion-interacumulador-acs-bivalente-lapesa.md)
+  * Estudio de Sobredimensionamiento y Fracción Solar: [estudio-sobredimensionado-y-fraccion-solar.md](estudio-sobredimensionado-y-fraccion-solar.md)
 

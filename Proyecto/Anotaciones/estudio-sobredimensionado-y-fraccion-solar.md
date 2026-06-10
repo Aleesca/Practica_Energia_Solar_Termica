@@ -1,5 +1,7 @@
 # Estudio Técnico: Justificación del Sobredimensionamiento y Coherencia de la Fracción Solar
 
+> Relacionado con: [Especificación: Antecedentes y Datos de Partida](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-34-equipamiento-de-referencia-y-fluidos)
+
 Esta anotación técnica analiza y valida la hipótesis planteada por el usuario sobre la idoneidad de no limitarse a los datos estrictamente sugeridos (10 captadores y 1.500 L) para el diseño del campo solar y el volumen de acumulación. Se evalúan las implicaciones hidráulicas, normativas y el riesgo de sobrecalentamiento bajo el CTE HE4 y el RITE, aplicando fuentes y criterios técnicos europeos.
 
 ---

@@ -1,5 +1,7 @@
 # Determinacion del caudal especifico del fluido caloportador
 
+> Relacionado con: [Especificación: Antecedentes y Datos de Partida](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-34-equipamiento-de-referencia-y-fluidos)
+
 Esta anotacion tecnica fija el caudal especifico de diseno del fluido caloportador en el circuito primario de la instalacion solar termica centralizada. El criterio se obtiene de la documentacion de Viessmann consultada en el notebook `Catalogos_solar` y se aplica al campo definitivo de captadores seleccionado para el proyecto.
 
 La instalacion adopta un campo solar formado por **12 captadores Viessmann Vitosol 200-FM, modelo vertical SV2F**, distribuidos en **dos filas de 6 captadores**. Esta configuracion no modifica el caudal especifico recomendado por el fabricante, pero si determina el caudal total que debe mover la bomba solar y el reparto hidraulico entre filas.

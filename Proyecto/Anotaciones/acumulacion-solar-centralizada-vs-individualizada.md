@@ -1,5 +1,7 @@
 # Anotación Técnica: Acumulación Solar Centralizada vs. Individualizada
 
+> Relacionado con: [Especificación: Antecedentes y Datos de Partida](../Especificaciones/especificacion-antecedentes-y-datos-de-partida.md#h2-22-justificación-del-sistema-centralizado)
+
 Esta anotación técnica resuelve la elección de la configuración de acumulación solar (centralizada o individualizada) para un edificio plurifamiliar que cuenta con una instalación receptora de gas natural existente.
 
 ---
@@ -13,7 +15,7 @@ Esta anotación técnica resuelve la elección de la configuración de acumulaci
 
 ## 2. Contexto de la instalación existente
 
-El edificio de viviendas objeto del proyecto cuenta con las siguientes características térmicas y de gas natural de partida (según [datos_GN.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/00_Data/datos_GN.md) y [Alcance.md](file:///H:/Unidades%20compartidas/Practicas_Inst2/6_Energia_Solar/Proyecto/Alcance.md)):
+El edificio de viviendas objeto del proyecto cuenta con las siguientes características térmicas y de gas natural de partida (según [datos_GN.md](../../00_Data/datos_GN.md) y [Alcance.md](../Alcance.md)):
 
 * **Instalación Receptora de Gas (IRG):** Distribución individualizada con contadores en vivienda y conexión a red de gas en Media Presión A (MPA, presiones de operación de hasta 0.4 bar).
 * **Sistema de apoyo o auxiliar:** Calderas murales mixtas individuales de gas natural de **22 kW** de potencia útil para calefacción y ACS en cada vivienda.
