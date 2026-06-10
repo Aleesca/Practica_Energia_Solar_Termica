@@ -233,6 +233,31 @@ Se predefinen los siguientes equipos de catálogo comercial para el dimensionado
 
 
 
+\subsection{Balance Energético de Partida}
+\label{subsec:balance_energetico_partida}
+
+El balance energético de la instalación solar térmica permite relacionar la demanda mensual de ACS con la energía útil aportada por el campo de captadores y con la energía que debe cubrir el sistema auxiliar de gas natural. En el escenario adoptado para el proyecto se consideran 12 captadores planos, una superficie de captación de $27.96\text{ m}^2$ y un volumen de acumulación centralizada de $2.000\text{ L}$, coherente con el interacumulador bivalente seleccionado.
+
+De forma conceptual, la energía solar incidente sobre el plano de captación se transforma en energía útil después de descontar las pérdidas ópticas y térmicas del captador, las pérdidas de transporte del circuito primario y las limitaciones asociadas al intercambio con el acumulador. Por tanto, el balance mensual puede interpretarse mediante la relación:
+
+\begin{equation}
+    Q_{\text{dem}} = Q_{\text{solar, util}} + Q_{\text{aux}}
+\end{equation}
+
+\noindent donde $Q_{\text{dem}}$ representa la demanda energética de ACS, $Q_{\text{solar, util}}$ el aporte realmente aprovechable procedente de los captadores y $Q_{\text{aux}}$ la energía complementaria suministrada por la caldera de apoyo. Esta lectura es especialmente relevante porque conecta los datos de partida de ocupación, demanda diaria, superficie de captación y volumen de acumulación con el rendimiento global esperado de la instalación.
+
+El resultado anual obtenido para el campo solar seleccionado proporciona una fracción solar del $75.3\%$, superior a la exigencia mínima considerada en la hoja de cálculo. La distribución mensual muestra que los meses de diciembre y enero son los más desfavorables por déficit de radiación, mientras que julio, agosto y septiembre concentran la mayor proximidad entre aporte solar y demanda. En agosto se alcanza la situación estival más exigente, con una fracción mensual del $106\%$, sin superar el límite de sobreproducción mensual del $110\%$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Figuras/balance_energetico.pdf}
+    \caption{Balance energético mensual de la instalación solar térmica para ACS. Fuente: elaboración propia a partir de la hoja de cálculo del proyecto.}
+    \label{fig:balance_energetico_solar_termica}
+\end{figure}
+
+Como se observa en la Figura~\ref{fig:balance_energetico_solar_termica}, el aporte solar útil reduce de forma significativa la energía auxiliar necesaria durante la mayor parte del año, pero no elimina la necesidad del respaldo centralizado. Por este motivo, el balance energético justifica simultáneamente la superficie de captadores adoptada, el volumen de acumulación de $2.000\text{ L}$ y la presencia de la caldera auxiliar para garantizar la continuidad del servicio en los meses de menor radiación.
+
+
 \section{Cálculos}
 
 
