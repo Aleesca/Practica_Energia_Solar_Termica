@@ -130,11 +130,11 @@ El presente proyecto ha sido promovido a solicitud de la propiedad con el propó
 La instalación se proyecta en estricto cumplimiento del marco reglamentario estatal vigente:
 
 \begin{enumerate}
-    \item \textbf{CTE DB-HE4 (Código Técnico de la Edificación - Ahorro de Energía):} Define la contribución mínima de energía renovable para la producción de ACS en el edificio residencial.
-    \item \textbf{RITE (Reglamento de Instalaciones Térmicas en los Edificios - R.D. 1027/2007):} Establece las exigencias de eficiencia energética, seguridad y mantenimiento para la red térmica centralizada.
-    \item \textbf{Real Decreto 487/2022:} Regula las medidas sanitarias y los requisitos de inspección y limpieza periódica física de los depósitos acumuladores de ACS para la prevención y el control de la legionelosis.
-    \item \textbf{Real Decreto 919/2006:} Reglamento técnico de distribución y utilización de combustibles gaseosos, aplicable a la instalación del quemador de la caldera auxiliar centralizada de gas natural.
-    \item \textbf{Norma UNE 60670:} Gobierna el diseño, ventilación, seguridad y configuración de la sala de calderas para el sistema auxiliar de gas natural en Media Presión A.
+    \item \uline{CTE DB-HE4 (Código Técnico de la Edificación - Ahorro de Energía):} Define la contribución mínima de energía renovable para la producción de ACS en el edificio residencial.
+    \item \uline{RITE (Reglamento de Instalaciones Térmicas en los Edificios - R.D. 1027/2007):} Establece las exigencias de eficiencia energética, seguridad y mantenimiento para la red térmica centralizada.
+    \item \uline{Real Decreto 487/2022:} Regula las medidas sanitarias y los requisitos de inspección y limpieza periódica física de los depósitos acumuladores de ACS para la prevención y el control de la legionelosis.
+    \item \uline{Real Decreto 919/2006:} Reglamento técnico de distribución y utilización de combustibles gaseosos, aplicable a la instalación del quemador de la caldera auxiliar centralizada de gas natural.
+    \item \uline{Norma UNE 60670:} Gobierna el diseño, ventilación, seguridad y configuración de la sala de calderas para el sistema auxiliar de gas natural en Media Presión A.
 \end{enumerate}
 
 \subsection{Ubicación Geográfica y Climatología}
@@ -250,18 +250,17 @@ El resultado anual obtenido para el campo solar seleccionado proporciona una fra
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Figuras/balance_energetico.pdf}
+    \includegraphics[width=\textwidth, trim={2cm 3cm 1.5cm 3.5cm},clip=true]{Figuras/balance_energetico.pdf}
     \caption{Balance energético mensual de la instalación solar térmica para ACS. Fuente: elaboración propia a partir de la hoja de cálculo del proyecto.}
     \label{fig:balance_energetico_solar_termica}
 \end{figure}
 
-Como se observa en la Figura~\ref{fig:balance_energetico_solar_termica}, el aporte solar útil reduce de forma significativa la energía auxiliar necesaria durante la mayor parte del año, pero no elimina la necesidad del respaldo centralizado. Por este motivo, el balance energético justifica simultáneamente la superficie de captadores adoptada, el volumen de acumulación de $2.000\text{ L}$ y la presencia de la caldera auxiliar para garantizar la continuidad del servicio en los meses de menor radiación.
+Como se observa en la \figref{fig:balance_energetico_solar_termica}, el aporte solar útil reduce de forma significativa la energía auxiliar necesaria durante la mayor parte del año, pero no elimina la necesidad del respaldo centralizado. Por este motivo, el balance energético justifica simultáneamente la superficie de captadores adoptada, el volumen de acumulación de $2000\text{ L}$ y la presencia de la caldera auxiliar para garantizar la continuidad del servicio en los meses de menor radiación.
 
 
 \section{Cálculos}
 
 
-\section{Esquema de principio}
 
 
 
@@ -294,14 +293,11 @@ Como se observa en la Figura~\ref{fig:balance_energetico_solar_termica}, el apor
 
 	\section{Bombas de circulación}
 
-		\subsection{Bombas del circuito primario (Solar)}
-		\includepdf[pages=-, fitpaper=true]{Figuras/bomba_circuito_primario_solarMAGNA3_40180_F.pdf}
+		\subsection{Bomba del circuito primario (Solar)}
+		\includepdf[pages=-, fitpaper=true]{Figuras/bomba_circuito_primario_ALPHA_SOLAR_25-75__180.pdf}
 
 		\subsection{Bomba de Recirculación de ACS}
-		\includepdf[pages=-, fitpaper=true]{Figuras/bomba_recirculacion_ACS-ALPHA2_2540_N_180.pdf}
-
-		\subsection{Bomba de apoyo (Caldera)}
-		\includepdf[pages=-, fitpaper=true]{Figuras/bomba_apoyo_caldera-ALPHA2_2560_180.pdf}
+		\includepdf[pages=-, fitpaper=true]{Figuras/bomba_recirculacion_ALPHA2_2540_N_180.pdf}
 
 \end{appendixspecialsections}
 
@@ -309,13 +305,8 @@ Como se observa en la Figura~\ref{fig:balance_energetico_solar_termica}, el apor
 \myappendix{Planos}
 \label{anx:01-planos}
 
-\includepdfmerge[
-	pagecommand={\thispagestyle{empty}},
-	fitpaper=true
-]{
-	Figuras/Planos/emplazamiento-situacion.pdf, -,
-	Figuras/Planos/plano_azotea.pdf, -
-}
+\includepdf[pages=-, pagecommand={\thispagestyle{empty}}, fitpaper=true]{Figuras/Planos/emplazamiento-situacion.pdf}
+\includepdf[pages=-, pagecommand={\thispagestyle{empty}}, fitpaper=true]{Figuras/Planos/plano_azotea.pdf}
 
 
 
