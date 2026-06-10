@@ -210,6 +210,7 @@
 % Entorno para secciones de anexo que son separadores centrados (sin encabezados ni pies)
 \newenvironment{appendixspecialsections}{
     \let\oldsection\section
+    \let\oldsubsection\subsection
     \renewcommand{\section}[1]{
         \cleardoublepage
         \thispagestyle{empty}
@@ -222,8 +223,21 @@
         \addcontentsline{toc}{subsection}{\protect\numberline{\thesection}##1}
         \newpage
     }
+    \renewcommand{\subsection}[1]{
+        \cleardoublepage
+        \thispagestyle{empty}
+        \refstepcounter{subsection}
+        \vspace*{\fill}
+        \begin{center}
+            {\normalfont\fontsize{20pt}{24pt}\selectfont\bfseries \thesubsection. ##1}
+        \end{center}
+        \vspace*{\fill}
+        \addcontentsline{toc}{subsubsection}{\protect\numberline{\thesubsection}##1}
+        \newpage
+    }
 }{
     \let\section\oldsection
+    \let\subsection\oldsubsection
 }
 
 \newcommand{\myappendix}[1]{%
