@@ -1,82 +1,113 @@
-# Plan: Antecedentes y Datos de Partida
+# Plan: Implementación de Antecedentes y Datos de Partida
 
-> Source PRD: [Solicitud de estructuración de antecedentes y datos de partida](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Planificacion/plan-antecedentes-y-datos-de-partida.md)
+> Source PRD: PRD conversacional sobre creación del PRD local y redacción del apartado `Antecedentes y datos de partida` en `Practica_Solar-LaTeX/plantilla.tex`.
 
-## Decisiones arquitectónicas
+## Resumen
+Convertir el PRD anterior en una implementación por fases, usando el flujo de agentes definido en `.agents/agents/`. El resultado operativo será un PRD local, una base técnica trazable, una redacción modular y la consolidación final en LaTeX.
 
-Durable decisions that apply across all phases:
-
-- **Estructura del Documento**: La especificación técnica final se redacta en formato Markdown (`.md`) dentro de [Especificaciones](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Especificaciones/).
-- **Alineación con Ingeniería Real**: Se estructurará el documento en dos grandes bloques diferenciados: `2. Antecedentes` (que contiene el contexto histórico, origen, objeto y marco normativo) y `3. Datos de Partida` (que define las restricciones físicas, geográficas, perfiles de ocupación y fichas técnicas de equipos).
-- **Esquema de Referencias Cruzadas**: Vinculación explícita bidireccional entre los condicionantes del enunciado de la práctica y las notas técnicas de ingeniería recopiladas en la carpeta de anotaciones.
-- **Formato Visual**: Estructuración rígida de datos mediante tablas Markdown alineadas a la derecha para columnas numéricas, bloques explicativos de tipo `> [!NOTE]` y `> [!TIP]`, sin fórmulas ni operaciones matemáticas.
-
----
-
-## Phase 1: Lectura de Fuentes y Captura de Referencia Catastral
-
-**User stories**:
-- Identificar la ubicación, el grupo de prácticas y extraer la referencia catastral desde el enunciado de la práctica.
-- Leer y procesar las anotaciones de ingeniería existentes en el proyecto sin omitir datos operativos.
-
-### What to build
-Un resumen estructurado con las coordenadas geográficas del edificio, su zona climática y de radiación, la demanda diaria de ACS y las características técnicas de los captadores solares y acumuladores seleccionados.
-
-### Acceptance criteria
-- [x] Referencia catastral `5089301TL7358G0001ZD` identificada para el Grupo G1-1 (Salamanca) a partir del enunciado de la práctica [Enunciado_practica.pdf](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/00_Data/Enunciado_practica.pdf).
-- [x] Datos geográficos consolidados a partir de [posicion_edificio.md](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/posicion_edificio.md) (Latitud $40^\circ 58'\ 8.31''\text{ N}$, Longitud $5^\circ 40'\ 29.95''\text{ O}$).
-- [x] Características técnicas del captador **Viessmann Vitosol 200-FM SV2F** y del acumulador **Lapesa Master Inox MXV-2000 SS2B** recopiladas de las anotaciones técnicas de [Anotaciones](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/).
+## Decisiones Arquitectónicas
+- **Destino del PRD**: crear un archivo local Markdown, recomendado en `Proyecto/Planificacion/prd_antecedentes_datos_partida.md`.
+- **Plan de implementación**: guardar el plan generado por `prd-to-plan` en `plans/antecedentes-datos-partida.md` cuando se active la ejecución.
+- **Orquestación**: usar `task-orchestrator` como coordinador principal.
+- **Investigación**: usar `solar-termica-researcher` para recopilar datos, fuentes, cálculos, huecos y trazabilidad.
+- **Redacción intermedia**: preparar contenido modular en `Proyecto/Especificaciones/` antes de tocar LaTeX.
+- **Consolidación final**: usar `latex-writer` para insertar contenido solo en la sección existente `\section{Antecedentes y datos de partida}`.
+- **Validación**: usar `latex-validator` para validación semántica, estática y, al final, compilación real.
 
 ---
 
-## Phase 2: Mapeo Estructural y Referencias Cruzadas
+## Phase 1: Crear PRD Local
 
-**User stories**:
-- Justificar técnicamente la colocación geométrica (inclinación y azimut) y calcular las pérdidas del plano de captación conforme al CTE DB-HE4.
-- Justificar el volumen de acumulación de 2.000 L seleccionado y las condiciones de hibridación con el circuito primario y la caldera auxiliar.
+**User stories**: disponer de un PRD local que gobierne la redacción del apartado y evite decisiones implícitas durante la ejecución.
 
 ### What to build
-Cálculo analítico detallado de las pérdidas por orientación e inclinación en Salamanca y la argumentación de la relación volumen/superficie ($V/S_c$) para evitar sobrecalentamientos estivales y cumplir con la normativa antilegionella.
+Crear un PRD Markdown con la estructura de `write-a-prd`: problema, solución, historias de usuario, decisiones de implementación, decisiones de prueba, fuera de alcance y notas. El PRD debe dejar claro que los adjuntos se mencionan como fuentes pendientes hasta que se autorice su lectura.
 
 ### Acceptance criteria
-- [x] Pérdidas por inclinación ($4.35\%$ - analizadas cualitativamente en especificaciones) y azimut ($1.40\%$) justificadas bajo el límite máximo del 10% del CTE DB-HE4 ($P_{total} = 5.75\%$).
-- [x] Justificación técnica de la inclinación a $60^\circ$ (mejora en invierno, autolimitación de sobrecalentamiento en verano) documentada.
-- [x] Relación de acumulación $\frac{V}{S_c} = 71.53\text{ l/m}^2$ justificada como óptima frente al CTE/RITE y vinculada al cumplimiento del **R.D. 487/2022** (serpentines desmontables mediante brida lateral DN400).
+- [ ] Existe un PRD local en `Proyecto/Planificacion/prd_antecedentes_datos_partida.md`.
+- [ ] El PRD define como salida final la sección `Antecedentes y datos de partida` en `plantilla.tex`.
+- [ ] El PRD exige trazabilidad de datos técnicos y marca los adjuntos como pendientes de lectura.
+- [ ] El PRD declara fuera de alcance la modificación de secciones no relacionadas de la plantilla.
 
 ---
 
-## Phase 3: Creación de la Especificación de Maquetación
+## Phase 2: Abrir Tarea con `task-orchestrator`
 
-**User stories**:
-- Disponer de un documento plantilla en Markdown que sirva de guía y maquetación de referencia para la sección de Antecedentes y Datos de Partida en la memoria.
-- Presentar la tabla mensual f-Chart de balance energético y verificar los límites de sobreproducción.
+**User stories**: coordinar el trabajo documental sin activar agentes fuera del flujo permitido.
 
 ### What to build
-Creación de la especificación técnica en Markdown con la estructura final de encabezados de la memoria, placeholders con datos reales, tablas alineadas, bloques informativos y matriz de trazabilidad de archivos.
+Preparar la tarea objetivo para el orquestador con sección, entradas canónicas, salida esperada y huecos. El orquestador debe reconocer que la salida primaria técnica es modular y que LaTeX es consolidación posterior.
 
 ### Acceptance criteria
-- [x] Archivo [especificacion-antecedentes-y-datos-de-partida.md](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Especificaciones/especificacion-antecedentes-y-datos-de-partida.md) creado en [Proyecto/Especificaciones](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Especificaciones/).
-- [x] Tabla de balance mensual f-Chart (demanda de $22.856\text{ kWh/año}$ y fracción anual resultante del $75.3\%$) integrada y formateada.
-- [x] Límites de sobreproducción verificados (mes máximo agosto con $106\% < 110\%$, y únicamente 3 meses por encima del $100\%$).
-- [x] Matriz de trazabilidad cruzada y enlaces absolutos a los archivos de origen plenamente operativos.
+- [ ] La tarea objetivo queda definida como `Antecedentes y datos de partida`.
+- [ ] Las fuentes canónicas disponibles quedan listadas: `Proyecto/Alcance.md`, `Proyecto/Anotaciones/`, `Proyecto/Especificaciones/`, `00_Data/`, `Calculos/` y `Practica_Solar-LaTeX/plantilla.tex`.
+- [ ] Las fuentes ausentes quedan señaladas sin bloquear el flujo.
+- [ ] La tarea restringe agentes a `solar-termica-researcher`, `latex-writer` y `latex-validator`.
 
 ---
 
-## Phase 4: Restructuración y Alineación con Estándares de Ingeniería Real
+## Phase 3: Investigar Fuentes Técnicas
 
-**User stories**:
-- Adaptar las especificaciones de maquetación para reflejar cómo se estructura la documentación en proyectos de ingeniería reales de energía solar térmica.
-- Separar de forma tajante el contexto del proyecto (Antecedentes) de los parámetros técnicos inalterables de diseño (Datos de Partida).
-- Incorporar el encargo, el marco normativo nacional aplicable y los condicionantes físicos del edificio (azotea, patinillos).
+**User stories**: reunir datos fiables para antecedentes, contexto, condiciones de partida y huecos sin redactar todavía la memoria final.
 
 ### What to build
-Actualización de [especificacion-antecedentes-y-datos-de-partida.md](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Especificaciones/especificacion-antecedentes-y-datos-de-partida.md) reestructurando el contenido en:
-- `## 2. Antecedentes del Proyecto` (Origen y objeto del encargo, justificación del sistema y Normativa de aplicación detallada).
-- `## 3. Datos de Partida` (Ubicación climática, Ocupación y demanda de consumo, Integración física del edificio [cubierta y patinillo de comunicaciones] y Equipamiento de referencia de catálogo).
+Encargar a `solar-termica-researcher` un informe técnico trazable por fuentes, datos, cálculos, artefactos reutilizables y vacíos. Debe distinguir energía solar térmica, respaldo de gas natural, condicionantes físicos del edificio y normativa aplicable.
 
 ### Acceptance criteria
-- [x] Documento de especificaciones dividido rigurosamente en las secciones principales "Antecedentes" y "Datos de Partida".
-- [x] Inclusión de una sección formal de **Normativa de aplicación** que recoja: CTE DB-HE4 (Contribución solar mínima para ACS), RITE (R.D. 1027/2007, Reglamento de Instalaciones Térmicas), R.D. 487/2022 (Prevención y control de Legionelosis), R.D. 919/2006 (Reglamento de Gas Natural), y normas UNE 60670.
-- [x] Inclusión de una sección de **Condicionantes de Integración Física** del edificio (montaje en cubierta plana transitada/azotea y distribución colectiva por el patinillo de comunicaciones vertical).
-- [x] Ausencia absoluta verificada de fórmulas matemáticas, ecuaciones en LaTeX y balances mensuales calculados de f-Chart.
-- [x] Enlaces cruzados plenamente funcionales a los archivos origen de [Anotaciones](file:///H:/Shared%20drives/Practicas_Inst2/6_Energia_Solar/Proyecto/Anotaciones/).
+- [ ] El informe cita cada fuente usada.
+- [ ] Los datos técnicos relevantes quedan separados de los huecos.
+- [ ] No se inventan datos, figuras ni normativa.
+- [ ] Los adjuntos no leídos quedan marcados como pendientes de verificación.
+- [ ] El informe recomienda qué debe entrar y qué debe quedar fuera de la redacción.
+
+---
+
+## Phase 4: Redactar Base Modular
+
+**User stories**: disponer de un borrador técnico revisable antes de consolidar en LaTeX.
+
+### What to build
+Crear o actualizar una especificación Markdown en `Proyecto/Especificaciones/` con la redacción base del apartado. La estructura debe separar antecedentes, datos de partida, criterios asumidos y datos pendientes.
+
+### Acceptance criteria
+- [ ] Existe una especificación modular para `Antecedentes y datos de partida`.
+- [ ] La redacción no introduce teoría general sin soporte documental.
+- [ ] Cada dato técnico queda trazado o marcado como pendiente.
+- [ ] La redacción mantiene separados el sistema solar térmico y el respaldo de gas natural.
+- [ ] El contenido está listo para transformación editorial a LaTeX.
+
+---
+
+## Phase 5: Consolidar en `plantilla.tex`
+
+**User stories**: integrar el contenido validado en la memoria LaTeX sin alterar la estructura principal del documento.
+
+### What to build
+Usar `latex-writer` para convertir la base modular en contenido LaTeX e insertarlo dentro de `\section{Antecedentes y datos de partida}` en `Practica_Solar-LaTeX/plantilla.tex`.
+
+### Acceptance criteria
+- [ ] La sección existente se conserva y se rellena con contenido técnico validado.
+- [ ] No se crean secciones principales nuevas.
+- [ ] Las tablas usan formato compatible con el proyecto.
+- [ ] Las figuras y citas solo se incluyen si están verificadas.
+- [ ] No hay rutas absolutas en recursos LaTeX.
+
+---
+
+## Phase 6: Validar y Cerrar
+
+**User stories**: confirmar que el contenido es coherente, compilable y trazable antes de dar la tarea por terminada.
+
+### What to build
+Aplicar `latex-validator` sobre el resultado. Validar coherencia semántica, formato estático y compilación de `Practica_Solar-LaTeX/plantilla.tex` cuando exista contexto compilable.
+
+### Acceptance criteria
+- [ ] La validación semántica pasa contra PRD, alcance y fuentes usadas.
+- [ ] La validación estática no detecta problemas críticos de LaTeX.
+- [ ] La compilación de `plantilla.tex` no presenta errores críticos.
+- [ ] El cierre documenta fuentes usadas, salida generada, validación aplicada y pendientes reales.
+
+## Supuestos
+- El plan parte del PRD conversacional anterior, no de un archivo PRD ya existente.
+- En Plan Mode no se crean archivos ni se modifica el repositorio.
+- Al ejecutar, el plan debe guardarse según la skill `prd-to-plan` en `plans/antecedentes-datos-partida.md`.

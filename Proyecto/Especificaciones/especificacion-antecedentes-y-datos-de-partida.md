@@ -93,6 +93,7 @@ Se predefinen los siguientes equipos de catálogo comercial para el dimensionado
 *   **Fluido Caloportador y Régimen Hidráulico:**
     *   Caudal Volumétrico Específico ($q_{esp}$): **$25\text{ L/(h}\cdot\text{m}^2\text{ de absorción)}$** *(Régimen Low-Flow)*.
     *   Caudal de Referencia de Diseño del Circuito Primario: **$693\text{ L/h}$** ($11.55\text{ L/min}$) o **$699\text{ L/h}$** ($11.65\text{ L/min}$).
+    *   Fluido Caloportador: Mezcla de agua con propilenglicol al **$30\%\text{ en volumen}$** para garantizar protección anticongelante hasta $-15^\circ\text{C}$ (temperatura de diseño para evitar heladas en Salamanca).
     *   Esquema de Retorno: Configuración en retorno invertido (sistema **Tichelmann**) para asegurar la igualdad de pérdida de carga y un caudal idéntico entre ambos ramales.
 *   **Respaldo Auxiliar (Gas Natural):**
     *   Caldera Centralizada: Caldera mural mixta de **$22\text{ kW}$** de potencia útil de diseño.

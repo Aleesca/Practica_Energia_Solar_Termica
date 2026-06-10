@@ -1,120 +1,77 @@
-# Plan: Seleccion de bomba comercial para circuito solar termico
+# Plan: Refinamiento de la seleccion de bombas del circuito solar termico y ACS
 
-> Fuente: solicitud del usuario sobre seleccion de una bomba comercial para la instalacion solar termica, con consulta en NotebookLM `Energia_Solar_Termica` y busqueda Exa de fabricantes europeos, priorizando Alemania.
+> Fuente de alcance: `Proyecto/Anotaciones/seleccion-bomba-circuito-solar-termico.md`.
 
 ## Resumen
 
-El objetivo es preparar una anotacion tecnica en `Proyecto/Anotaciones/` que justifique si la instalacion necesita una bomba al salir del sistema bivalente intercambiador-deposito hacia los colectores solares, y si tambien hacen falta bombas en los tramos previos u otros circuitos. La investigacion debe apoyarse en NotebookLM `Energia_Solar_Termica` y en busqueda profunda Exa con fuentes de fabricantes europeos, priorizando fabricantes alemanes.
+El objetivo es revisar y corregir la nota indicada sin implementar cambios en el contenido tecnico definitivo aun. El refinamiento debe aclarar la ubicacion real de la bomba del circuito solar primario, eliminar la bomba de apoyo de caldera y rehacer la seleccion de la bomba de recirculacion de ACS usando datos correctos de calculo y una consulta de mercado con Exa Deep Search.
 
-## Decisiones arquitectonicas
+## Cambios principales
 
-Estas decisiones deben mantenerse constantes durante toda la ejecucion:
+- Corregir la interpretacion de la bomba del circuito solar primario, dejando claro que va en azotea.
+- Eliminar la lectura incorrecta de altura nominal para esa bomba, porque no aplica en la forma en que estaba planteada.
+- Replantear la bomba de recirculacion de ACS con el punto de calculo del circuito de distribucion:
+  - Caudal: `370 L/h`.
+  - Altura manometrica: `0.41 m.c.a.`
+- Aplicar un margen de seleccion para la bomba de ACS consultando proyectos reales o criterios tecnicos habituales de instalaciones solares termicas, sin fijar ese margen en el plan.
+- Buscar y contrastar opciones comerciales Grundfos con `Exa Deep Search`.
+- Eliminar por completo la bomba del circuito de apoyo de caldera.
 
-- **Documento de salida**: una anotacion Markdown en `Proyecto/Anotaciones/`.
-- **Ambito tecnico**: circuito primario solar, enlace con el sistema bivalente, posibles circuitos secundarios y necesidad real de bombeo.
-- **Fuentes base**: NotebookLM `Energia_Solar_Termica` y fuentes oficiales de fabricantes europeos.
-- **Criterio de seleccion**: prioridad a fabricantes alemanes o europeos con documentacion tecnica oficial.
+## Fases de trabajo
 
----
+### Fase 1: Relectura tecnica del alcance
 
-## Fase 1: Inventario tecnico de la instalacion
+**Objetivo**: identificar con precision que parte del texto afecta a cada bomba y que afirmaciones deben corregirse o retirarse.
 
-**Historias cubiertas**: identificar el circuito real, localizar el tramo donde se plantea la bomba y reunir datos para una decision hidraulica.
+**Resultado esperado**:
+- Localizacion de los pasajes del documento vinculados al circuito solar primario.
+- Localizacion de los pasajes vinculados a la recirculacion de ACS.
+- Localizacion de cualquier referencia a la bomba de apoyo de caldera para su eliminacion.
 
-### Que hay que construir
+### Fase 2: Correccion del circuito solar primario
 
-Revisar la documentacion local relevante del proyecto para identificar los circuitos implicados: primario solar hacia colectores, acumulacion/intercambio, ACS y posibles circuitos auxiliares. Extraer o dejar explicitamente marcados los datos necesarios para dimensionar la impulsion: tipo y numero de colectores, caudal de diseno, longitud de tuberias, diametros, fluido, temperaturas y presiones de trabajo.
+**Objetivo**: rehacer la justificacion de la bomba del primario solar para que refleje su ubicacion real en azotea y su condicion hidraulica correcta.
 
-### Criterios de aceptacion
+**Resultado esperado**:
+- Se elimina la interpretacion de una altura nominal improcedente.
+- La justificacion queda referida a la configuracion real del circuito y no a una exigencia de bombeo mal formulada.
 
-- [ ] Queda identificado el circuito en el que se plantea la bomba.
-- [ ] Quedan separados los circuitos primario, secundario y auxiliares, si existen.
-- [ ] Se listan los datos tecnicos disponibles y los que siguen faltando para cerrar la seleccion.
+### Fase 3: Definicion del margen para ACS con evidencia real
 
----
+**Objetivo**: decidir el margen de seleccion de la bomba de recirculacion a partir de proyectos reales, referencias tecnicas o practicas habituales del sector.
 
-## Fase 2: Consulta tecnica en NotebookLM
+**Resultado esperado**:
+- El margen se justifica con evidencia externa.
+- El documento final distingue entre el punto calculado y el punto de seleccion comercial.
+- No se fija un valor de margen dentro del plan; se decide durante la ejecucion.
 
-**Historias cubiertas**: fundamentar la necesidad de bomba en el primario solar y aclarar si otros circuitos requieren impulsion propia.
+### Fase 4: Busqueda de bomba Grundfos
 
-### Que hay que construir
+**Objetivo**: localizar bombas Grundfos que cubran el punto de trabajo de la recirculacion de ACS una vez aplicado el margen justificado.
 
-Consultar el notebook `Energia_Solar_Termica` para extraer la base tecnica sobre ubicacion de bombas en instalaciones solares termicas, funcionamiento con interacumulador bivalente y condiciones en las que otros circuitos necesitan bombeo independiente. La salida debe dejar trazabilidad suficiente para poder citar la justificacion dentro de la anotacion final.
+**Resultado esperado**:
+- Busqueda ejecutada con `Exa Deep Search`.
+- Identificacion de una bomba principal y, si procede, una alternativa.
+- Registro del modelo, rango de trabajo y compatibilidad con ACS.
 
-### Criterios de aceptacion
+### Fase 5: Limpieza del documento
 
-- [ ] Se obtiene respaldo tecnico para la ubicacion de la bomba en el circuito solar.
-- [ ] Se aclara si los tramos previos o secundarios necesitan bomba o pueden apoyarse en la configuracion existente.
-- [ ] La evidencia queda lista para trasladarse a la anotacion final.
+**Objetivo**: retirar elementos que ya no deben formar parte de la nota tecnica.
 
----
+**Resultado esperado**:
+- La bomba de apoyo de caldera desaparece del texto.
+- Tablas, conclusiones y referencias quedan coherentes entre si.
 
-## Fase 3: Busqueda profunda de bombas comerciales
+## Criterios de aceptacion
 
-**Historias cubiertas**: encontrar alternativas de fabricante que sean compatibles con la instalacion y comparar opciones reales del mercado.
-
-### Que hay que construir
-
-Usar Exa Deep Search para localizar bombas comerciales de fabricantes europeos con prevalencia alemana. Priorizar fuentes oficiales: fichas tecnicas, catalogos, manuales de instalacion y curvas hidraulicas. Incluir al menos tres alternativas comparables y descartar fuentes no oficiales salvo para localizar documentacion primaria.
-
-### Criterios de aceptacion
-
-- [ ] Se documentan al menos tres opciones comerciales viables.
-- [ ] Las fuentes principales son oficiales del fabricante.
-- [ ] Al menos una opcion preferente procede de un fabricante aleman o de gran presencia alemana en el sector.
-
----
-
-## Fase 4: Evaluacion hidraulica de la necesidad de bombas
-
-**Historias cubiertas**: decidir si la bomba se necesita solo en el primario solar o tambien en otros circuitos.
-
-### Que hay que construir
-
-Contrastar la documentacion de la instalacion con la teoria tecnica para decidir donde es necesaria una bomba y donde no. El analisis debe separar con claridad tres casos: bomba necesaria, bomba no necesaria y bomba condicionada a la configuracion final. La conclusion debe contemplar el circuito entre el sistema bivalente y los colectores, y tambien los tramos previos o auxiliares.
-
-### Criterios de aceptacion
-
-- [ ] Se emite una conclusion tecnica sobre el circuito principal hacia colectores.
-- [ ] Se determina si hay bombeo adicional en otros circuitos.
-- [ ] La conclusion explicita que la seleccion final puede depender de datos de perdida de carga si faltan valores definitivos.
-
----
-
-## Fase 5: Seleccion comercial final
-
-**Historias cubiertas**: escoger una bomba comercial justificable con parametros de trabajo y respaldo de fabricante.
-
-### Que hay que construir
-
-Comparar las alternativas encontradas segun caudal, altura manometrica, temperatura maxima, compatibilidad con glicol, materiales, eficiencia, control y facilidad de integracion. Elegir una recomendacion principal y una alternativa equivalente. Si faltan datos para cerrar el dimensionado, dejar la seleccion condicionada y explicitar que parametros faltan.
-
-### Criterios de aceptacion
-
-- [ ] Se propone una opcion preferente y al menos una alternativa.
-- [ ] Cada opcion incluye datos tecnicos suficientes para evaluar compatibilidad.
-- [ ] La recomendacion queda ligada a una justificacion tecnica, no solo comercial.
-
----
-
-## Fase 6: Redaccion de la anotacion final
-
-**Historias cubiertas**: dejar la explicacion completa y reutilizable en `Proyecto/Anotaciones/`.
-
-### Que hay que construir
-
-Redactar la anotacion final en formato tecnico, coherente con las anotaciones existentes, incluyendo: descripcion del circuito, necesidad de bomba en el tramo hacia colectores, analisis de otros circuitos, comparativa de bombas comerciales y recomendacion final. Cerrar con bibliografia y enlaces separados entre NotebookLM y fabricantes.
-
-### Criterios de aceptacion
-
-- [ ] La nota se guarda en `Proyecto/Anotaciones/`.
-- [ ] La explicacion distingue entre necesidad hidraulica y seleccion comercial.
-- [ ] Las fuentes externas proceden principalmente de fabricantes europeos, con prevalencia alemana.
-- [ ] La conclusion final queda clara y accionable.
+- La nota revisada sigue siendo un documento de anotacion tecnica y no una implementacion de calculo nueva.
+- La bomba solar primaria queda explicada con su ubicacion en azotea y sin la altura nominal improcedente.
+- La seleccion de la bomba ACS parte de `370 L/h` y `0.41 m.c.a.` y usa un margen decidido con evidencia de proyectos reales.
+- La busqueda comercial se realiza con `Exa Deep Search`.
+- No queda ninguna referencia funcional a la bomba de apoyo de caldera.
 
 ## Suposiciones
 
-- El sistema bivalente intercambiador-deposito ya integra el intercambio termico, pero no se presupone que integre toda la impulsion hidraulica hacia colectores.
-- La bomba objetivo pertenece al circuito primario solar o grupo de bombeo solar.
-- La salida final sera una anotacion tecnica Markdown, no una modificacion de calculos ni planos.
-- Se priorizara una recomendacion practica comercial sobre una seleccion definitiva cerrada si faltan datos hidraulicos completos.
+- `370 L` se interpreta como `370 L/h`.
+- La salida final seguira siendo un Markdown de planificacion dentro de `Proyecto/Planificacion/`.
+- La resolucion del margen de seleccion se dejara para la ejecucion del plan, no para el texto del plan.

@@ -33,9 +33,9 @@
 		\vspace{0.5cm}
 		{\LARGE\bfseries INSTALACIONES II}
 
-		\vspace{2cm}
+		\vspace{1.5cm}
 
-		{\Large PRÁCTICA DE ENERGÍA SOLAR TÉRMICA}\\[2cm]
+		{\Large ANÁLISIS DE PROYECTO DE APROVECHAMIENTO SOLAR PARA GENERAR AGUA CALIENTE}\\[2cm]
 	\end{center}
 
 	\vfill
@@ -105,6 +105,134 @@
 \section{Antecedentes y datos de partida}
 \label{sec:introduccion}
 
+\subsection{Introducción y Objetivos}
+\label{subsec:origen_y_objeto}
+
+El presente proyecto ha sido promovido a solicitud de la propiedad con el propósito de ejecutar una reforma y mejora de la eficiencia energética en un edificio residencial plurifamiliar preexistente. El objeto de la instalación consiste en definir y dimensionar un sistema solar térmico centralizado destinado a la producción de Agua Caliente Sanitaria (ACS), el cual estará hibridado con un sistema de apoyo auxiliar centralizado mediante una caldera de gas natural.
+
+\subsection{Justificación del Sistema Centralizado}
+\label{subsec:justificacion_centralizado}
+
+\begin{itemize}
+    \item \uline{Selección de Esquema:} Se adopta un esquema completamente centralizado (acumulación y apoyo centralizados en sala técnica común).
+    \item \uline{Ventajas Técnicas:} 
+    \begin{itemize}
+        \item Simplificación de la hidráulica al interior de las viviendas y supresión de calderas individuales mixtas.
+        \item Optimización del mantenimiento preventivo y correctivo al unificar los equipos de intercambio en un único espacio técnico.
+        \item Liberación de superficie útil y eliminación de conductos individuales de evacuación en cada vivienda.
+    \end{itemize}
+    \item \uline{Criterio de Control Sanitario:} El volumen total de acumulación centralizada y la red de distribución se dimensionan para asegurar las temperaturas de consigna reglamentarias para prevenir la proliferación de microorganismos.
+\end{itemize}
+
+\subsection{Normativa de Aplicación}
+\label{subsec:normativa_aplicacion}
+
+La instalación se proyecta en estricto cumplimiento del marco reglamentario estatal vigente:
+
+\begin{enumerate}
+    \item \textbf{CTE DB-HE4 (Código Técnico de la Edificación - Ahorro de Energía):} Define la contribución mínima de energía renovable para la producción de ACS en el edificio residencial.
+    \item \textbf{RITE (Reglamento de Instalaciones Térmicas en los Edificios - R.D. 1027/2007):} Establece las exigencias de eficiencia energética, seguridad y mantenimiento para la red térmica centralizada.
+    \item \textbf{Real Decreto 487/2022:} Regula las medidas sanitarias y los requisitos de inspección y limpieza periódica física de los depósitos acumuladores de ACS para la prevención y el control de la legionelosis.
+    \item \textbf{Real Decreto 919/2006:} Reglamento técnico de distribución y utilización de combustibles gaseosos, aplicable a la instalación del quemador de la caldera auxiliar centralizada de gas natural.
+    \item \textbf{Norma UNE 60670:} Gobierna el diseño, ventilación, seguridad y configuración de la sala de calderas para el sistema auxiliar de gas natural en Media Presión A.
+\end{enumerate}
+
+\subsection{Ubicación Geográfica y Climatología}
+\label{subsec:ubicacion_y_climatologia}
+
+\begin{itemize}
+    \item \uline{Referencia Catastral:} \texttt{5089301TL7358G0001ZD} (obtenida para el Grupo G1-1).
+    \item \uline{Coordenadas Geográficas:} Latitud $40^\circ 58'\ 8.31''\text{ N}$ ($40.968975^\circ$), Longitud $5^\circ 40'\ 29.95''\text{ O}$ ($-5.674986^\circ$).
+    \item \uline{Ubicación Física:} Salamanca.
+\end{itemize}
+
+En la \tabref{tab:parametros_geoclimaticos} se detallan los parámetros geoclimáticos de diseño que determinan las condiciones ambientales del proyecto.
+
+\begin{table}[H]
+\centering
+\caption{Parámetros geoclimáticos de la ubicación del proyecto.}
+\label{tab:parametros_geoclimaticos}
+\begin{tabularx}{\textwidth}{p{5.5cm}cX}
+\toprule
+\textbf{Parámetro Geoclimático} & \textbf{Valor / Clasificación} & \textbf{Origen del Dato} \\
+\midrule
+Zona Climática (CTE DB-HE1) & D2 & Severidad climática D (invierno), 2 (verano) \\
+Zona de Radiación Solar (CTE DB-HE4) & Zona III & Irradiancia horizontal diaria media anual: $3.8 - 4.2 \text{ kWh/(m}^2\cdot\text{día)}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{quote}
+\itshape
+Nota: Las coordenadas geográficas sirven exclusivamente para establecer las variables climatológicas fijas de radiación global media diaria ($H_{\text{día}}$), temperatura media ambiental ($T_{\text{amb}}$) y temperatura de entrada del agua fría de red ($T_{\text{red}}$). El azimut físico y la inclinación son parámetros geométricos independientes fijados por el diseño de la planta.
+\end{quote}
+
+\subsection{Edificación, Ocupación y Perfil de Demanda}
+\label{subsec:edificacion_ocupacion_demanda}
+
+\begin{itemize}
+    \item \uline{Tipología:} Edificio residencial plurifamiliar.
+    \item \uline{Número de Viviendas:} 10 viviendas de diseño estándar.
+    \item \uline{Dormitorios por Vivienda:} 3 dormitorios (habitaciones) seleccionados por vivienda.
+    \item \uline{Ocupación de Diseño:} 40 personas (equivalente a 4 personas por vivienda, calculadas según el estándar de ocupación del documento CTE DB-HE4 para viviendas de 3 dormitorios: 10 viviendas $\times$ 4 personas/vivienda).
+    \item \uline{Temperatura de Referencia para ACS:} $60^\circ\text{C}$ (regulado por exigencia sanitaria antilegionella).
+    \item \uline{Demanda Diaria Unificada de ACS:} $1.064 \text{ L/día}$ a $60^\circ\text{C}$.
+\end{itemize}
+
+\subsection{Condicionantes de Integración Física}
+\label{subsec:condicionantes_integracion}
+
+La configuración estructural del edificio impone los siguientes límites físicos para la distribución e implantación de los equipos:
+\begin{itemize}
+    \item \uline{Ubicación del Campo Solar:} Cubierta plana transitable (azotea) libre de obstáculos y sombras de edificaciones adyacentes.
+    \item \uline{Trazado de Columnas Hidráulicas:} Canalización vertical de tuberías de ida y retorno del circuito primario y secundario a través del patinillo de comunicaciones común del edificio.
+    \item \uline{Ubicación de Acumuladores:} Sala de máquinas/sala técnica común del edificio en planta baja, con acceso técnico dimensionado para el volteo de equipos.
+\end{itemize}
+
+\subsection{Equipamiento de Referencia y Fluidos}
+\label{subsec:equipamiento_y_fluidos}
+
+Se predefinen los siguientes equipos de catálogo comercial para el dimensionado físico del sistema:
+
+\begin{itemize}
+    \item \uline{Modelo de Colector Solar:} Viessmann Vitosol 200-FM (SV2F vertical) con protección integrada contra sobretemperaturas ThermProtect.
+    \item \uline{Distribución del Campo Solar:} 12 colectores planos distribuidos simétricamente en 2 filas paralelas de 6 unidades.
+    \item \uline{Parámetros Físicos del Colector (por unidad):}
+    \begin{itemize}
+        \item Superficie Bruta: $2.51\text{ m}^2$
+        \item Superficie de Apertura: $2.33\text{ m}^2$
+        \item Superficie de Absorción: $2.31\text{ m}^2$
+    \end{itemize}
+    \item \uline{Orientación e Inclinación del Soporte:}
+    \begin{itemize}
+        \item Inclinación ($\beta$): $60^\circ$ respecto a la horizontal (justificada para favorecer captación invernal y autolimitar la estival).
+        \item Azimut ($\alpha$): $+20^\circ$ (desviación de $20^\circ$ al Oeste respecto al Sur geográfico).
+    \end{itemize}
+    \item \uline{Depósito Acumulador Prescrito:} Lapesa Master Inox MXV-2000 SS2B (Acero Inoxidable AISI 316 L).
+    \begin{itemize}
+        \item Capacidad Nominal: $2.000 \text{ L}$ (Bivalente con serpentines desmontables).
+        \item Relación Volumen/Superficie de Apertura ($V/S_c$): $71.53 \text{ L/m}^2$ (Óptimo del IDAE).
+        \item Serpentín Inferior (Solar): Desmontable de acero inoxidable con $3.4\text{ m}^2$ de superficie de intercambio.
+        \item Serpentín Superior (Apoyo): Desmontable de acero inoxidable con $2.0\text{ m}^2$ de superficie de intercambio.
+        \item Boca de Hombre Lateral: Brida con diámetro nominal BH DN400 para inspección física.
+    \end{itemize}
+    \item \uline{Fluido Caloportador y Régimen Hidráulico:}
+    \begin{itemize}
+        \item Caudal Volumétrico Específico ($q_{\text{esp}}$): $25 \text{ L/(h}\cdot\text{m}^2\text{ de absorción)}$ (Régimen Low-Flow).
+        \item Caudal de Referencia de Diseño del Circuito Primario: $693 \text{ L/h}$ ($11.55 \text{ L/min}$) o $699 \text{ L/h}$ ($11.65 \text{ L/min}$).
+        \item Fluido Caloportador: Mezcla de agua con propilenglicol al $30\%\text{ en volumen}$ para garantizar protección anticongelante hasta $-15^\circ\text{C}$ (temperatura de diseño para evitar heladas en Salamanca).
+        \item Esquema de Retorno: Configuración en retorno invertido (sistema Tichelmann) para asegurar la igualdad de pérdida de carga y un caudal idéntico entre ambos ramales.
+        \item Elementos de Circulación: Se contemplan de manera puramente conceptual e instrumental bombas de circulación para los circuitos primario y secundario, cuya función es permitir el transporte del fluido caloportador entre la cubierta, el interacumulador de sala técnica y la caldera de apoyo, posponiéndose su dimensionamiento hidráulico específico y la determinación de potencias para la fase de cálculo de pérdida de carga.
+    \end{itemize}
+    \item \uline{Respaldo Auxiliar (Gas Natural):}
+    \begin{itemize}
+        \item Caldera Centralizada: Caldera mural mixta de $22\text{ kW}$ de potencia útil de diseño.
+        \item Combustible: Gas Natural con Poder Calorífico Superior (PCS) normalizado de $40.68\text{ MJ/m}^3\text{(s)}$.
+    \end{itemize}
+\end{itemize}
+
+
+
 \section{Cálculos}
 
 
@@ -124,14 +252,6 @@
 
 %%%% Anexos ----------------------------
 % 2. Iniciamos el entorno de anexos
-\myappendix{Planos}
-\label{anx:01-planos}
-
-\includepdf[
-	pages=-,
-	pagecommand={\thispagestyle{empty}},
-	fitpaper=true
-]{Figuras/plano_instalacion_solar-Azotea.pdf}
 
 
 \myappendix{Características técnicas de los equipos}
@@ -152,7 +272,7 @@
 		\subsection{Bombas del circuito primario (Solar)}
 		\includepdf[pages=-, fitpaper=true]{Figuras/bomba_circuito_primario_solarMAGNA3_40180_F.pdf}
 
-		\subsection{Bomba de recirculación de ACS}
+		\subsection{Bomba de Recirculación de ACS}
 		\includepdf[pages=-, fitpaper=true]{Figuras/bomba_recirculacion_ACS-ALPHA2_2540_N_180.pdf}
 
 		\subsection{Bomba de apoyo (Caldera)}
@@ -161,6 +281,16 @@
 \end{appendixspecialsections}
 
 
+\myappendix{Planos}
+\label{anx:01-planos}
+
+\includepdfmerge[
+	pagecommand={\thispagestyle{empty}},
+	fitpaper=true
+]{
+	Figuras/Planos/emplazamiento-situacion.pdf, -,
+	Figuras/Planos/plano_azotea.pdf, -
+}
 
 
 

@@ -49,7 +49,8 @@ Para garantizar la durabilidad, el rendimiento térmico y la seguridad higiénic
 
 ### D. Bomba de Apoyo de la Caldera (Grundfos ALPHA2 25-60 180)
 *   **Ubicación Física:** Se instalará en la **tubería de retorno del lazo de intercambio** (el tramo que sale de la parte superior del serpentín de apoyo superior del interacumulador y se dirige hacia el retorno de la caldera).
-*   **Justificación Técnica:**
+*  
+ **Justificación Técnica:**
     1.  **Protección de la Electrónica del Circulador:** Aunque los circuladores Grundfos toleran hasta $110^\circ\text{C}$, situarla en el retorno (donde el agua ya ha cedido su calor en el serpentín superior, bajando de $80^\circ\text{C}$ a unos $60^\circ\text{C}$) reduce significativamente el estrés térmico de la bomba y prolonga su vida útil.
     2.  **Optimización del Caudal de Caldera:** Al succionar desde el interacumulador y empujar el agua hacia el retorno de la caldera, se asegura una presión de aspiración estable en la caldera, previniendo choques térmicos y garantizando que el intercambiador de calor de la caldera trabaje en régimen óptimo.
     3.  **Válvula Antirretorno:** Se instalará una válvula de retención a la salida de la bomba para impedir que el agua del circuit## 4. Especificaciones y Justificaciones de las Bombas Grundfos Prescritas
@@ -59,7 +60,7 @@ A continuación se detallan el equipo prescrito, su ubicación, su justificació
 ### 1. Bomba del Circuito Primario Solar: Grundfos MAGNA3 40-180 F
 *   **¿Qué bomba se instala?** Circulador de rotor húmedo de alta eficiencia y alta altura manométrica.
 *   **¿Dónde se instala?** En la tubería de retorno del primario solar, en la sala de máquinas del sótano, inmediatamente a la salida del serpentín inferior del interacumulador Lapesa.
-*   **¿Por qué se instala?** Es imprescindible para impulsar el fluido caloportador (agua + glicol propileno 30-50%) a lo largo de todo el bucle solar primario. Dado que la sala técnica está en el sótano y los captadores en la azotea, la bomba debe poder vencer la cota estática de **$15,5\text{ m}$** durante la fase de llenado inicial de la red o en sistemas de vaciado por gravedad (drainback), por lo que se requiere un modelo con altura nominal de $18\text{ m.c.a.}$, superando los límites de los circuladores domésticos estándar. Su posición en el retorno frío la protege contra sobretemperaturas.
+*   **¿Por qué se instala?** Es imprescindible para impulsar el fluido caloportador (agua + glicol propileno 30-50%) a lo largo de todo el bucle solar primario. Dado que la sala técnica está en el sótano y los captadores en la azotea, la bomba debe poder vencer la cota estática de **$13\text{ m}$** durante la fase de llenado inicial de la red o en sistemas de vaciado por gravedad (drainback), por lo que se requiere un modelo con altura nominal de $18\text{ m.c.a.}$, superando los límites de los circuladores domésticos estándar. Su posición en el retorno frío la protege contra sobretemperaturas.
 *   **Especificaciones Técnicas:**
     *   **Número de Producto:** **97924272**
     *   **Material del Cuerpo:** Fundición de hierro con recubrimiento por cataforesis (apto para circuito cerrado).
